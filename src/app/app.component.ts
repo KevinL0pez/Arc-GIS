@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'arc-gis';
+  // Set our map properties
+  mapCenter = [-74.081178, 4.701009];
+  basemapType = 'streets-navigation-vector';
+  mapZoomLevel = 13;
+
+  // See app.component.html
+  mapLoadedEvent(status: boolean) {
+    console.log('The map loaded: ' + status);
+  }
 }
